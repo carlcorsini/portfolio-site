@@ -235,6 +235,11 @@ class MobileContainer extends Component {
               as="a">
               <Icon name="code" /> Source Code
             </Menu.Item>
+            <Menu.Item
+              style={{ textDecoration: 'none' }}
+              href="mailto:carl.m.corsini@gmail.com">
+              <Icon name="envelope" /> carl.m.corsini@gmail.com
+            </Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher
@@ -458,7 +463,7 @@ const HomePage = () => {
                 </List>
               </Grid.Column>
               <Grid.Column width={6}>
-                <Icon name="smiley" />
+                <Icon name="linkify" />
                 <List link inverted>
                   <List.Item href="https://github.com/carlcorsini" as="a">
                     <Icon name="github" />
