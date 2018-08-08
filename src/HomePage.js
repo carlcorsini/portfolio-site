@@ -271,6 +271,11 @@ class MobileContainer extends Component {
                     <Icon name="soundcloud" />
                   </Menu.Item>
                   <Menu.Item
+                    href="https://www.instagram.com/carlmemaybee"
+                    as="a">
+                    <Icon name="instagram" />
+                  </Menu.Item>
+                  <Menu.Item
                     position="right"
                     style={{ textDecoration: 'none' }}
                     href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
