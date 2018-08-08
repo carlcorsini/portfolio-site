@@ -148,17 +148,25 @@ class MobileContainer extends Component {
             <Menu.Item
               style={{ textDecoration: 'none' }}
               href="https://github.com/carlcorsini/BeerMe-Frontend">
-              <Icon name="github" />
+              <Icon name="github" /> Github
             </Menu.Item>
             <Menu.Item
               style={{ textDecoration: 'none' }}
               href="https://linkedin.com/in/carlcorsini">
-              <Icon name="linkedin" />
+              <Icon name="linkedin" /> LinkedIn
             </Menu.Item>
             <Menu.Item
               style={{ textDecoration: 'none' }}
               href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
+              <Icon name="file alternate" />
               Resume
+            </Menu.Item>
+            <Menu.Item href="https://www.instagram.com/carlmemaybee" as="a">
+              <Icon name="instagram" />
+              Instagram
+            </Menu.Item>
+            <Menu.Item href="https://soundcloud.com/carl-corsini" as="a">
+              <Icon name="soundcloud" /> Soundcloud
             </Menu.Item>
           </Sidebar>
 
