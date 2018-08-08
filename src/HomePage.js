@@ -329,7 +329,7 @@ const HomePage = () => {
             from experience in management. Carl also enjoys producing music,
             photography, and spending time away from his laptop occasionally.
           </p>
-          <Button primary download href="Resume.pdf" as="a" size="large">
+          <Button primary download href="/Resume.pdf" as="a" size="large">
             Click To Download
           </Button>
 
