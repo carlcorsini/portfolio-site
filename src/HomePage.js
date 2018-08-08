@@ -62,8 +62,31 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Header
-      as="h2"
-      content="Software Engineer"
+      href="#projects"
+      as="a"
+      content="Software "
+      inverted
+      style={{
+        fontSize: mobile ? '1.5em' : '1.7em',
+        fontWeight: 'normal',
+        marginTop: mobile ? '0.5em' : '1.5em'
+      }}
+    />
+    <Header
+      href="#photos"
+      as="a"
+      content="| Photography "
+      inverted
+      style={{
+        fontSize: mobile ? '1.5em' : '1.7em',
+        fontWeight: 'normal',
+        marginTop: mobile ? '0.5em' : '1.5em'
+      }}
+    />
+    <Header
+      href="#music"
+      as="a"
+      content="| Music"
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -125,12 +148,19 @@ class DesktopContainer extends Component {
                   href="https://linkedin.com/in/carlcorsini">
                   <Icon name="linkedin" />
                 </Menu.Item>
+                <Menu.Item href="https://soundcloud.com/carl-corsini" as="a">
+                  <Icon name="soundcloud" />
+                </Menu.Item>
+                <Menu.Item href="https://www.instagram.com/carlmemaybee" as="a">
+                  <Icon name="instagram" />
+                </Menu.Item>
                 <Menu.Item
                   style={{ textDecoration: 'none' }}
                   href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
                   Resume
                 </Menu.Item>
                 <Menu.Item
+                  position="right"
                   style={{ textDecoration: 'none' }}
                   href="mailto:carl.m.corsini@gmail.com">
                   carl.m.corsini@gmail.com
@@ -171,6 +201,7 @@ class MobileContainer extends Component {
       <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
         <Sidebar.Pushable>
           <Sidebar
+            className="landing-image"
             as={Menu}
             animation="uncover"
             inverted
@@ -211,6 +242,7 @@ class MobileContainer extends Component {
             onClick={this.handlePusherClick}
             style={{ minHeight: '100vh' }}>
             <Segment
+              className="landing-image"
               inverted
               textAlign="center"
               style={{ minHeight: 350, padding: '1em 0em' }}
@@ -229,6 +261,14 @@ class MobileContainer extends Component {
                     style={{ textDecoration: 'none' }}
                     href="https://linkedin.com/in/carlcorsini">
                     <Icon name="linkedin" />
+                  </Menu.Item>
+                  <Menu.Item href="https://soundcloud.com/carl-corsini" as="a">
+                    <Icon name="soundcloud" />
+                  </Menu.Item>
+                  <Menu.Item
+                    href="https://www.instagram.com/carlmemaybee"
+                    as="a">
+                    <Icon name="instagram" />
                   </Menu.Item>
                   <Menu.Item
                     style={{ textDecoration: 'none' }}
@@ -275,10 +315,7 @@ const HomePage = () => {
             Things work out best for those who make the best of the way things
             work out.
           </p>
-          <p style={{ textAlign: 'right', paddingRight: '10em' }}>
-            {' '}
-            -John Wooden
-          </p>
+          <p style={{}}> -John Wooden</p>
         </Container>
       </Segment>
 
@@ -330,7 +367,7 @@ const HomePage = () => {
           </Grid.Row>
         </Grid>
       </Segment>
-      <Segment style={{ padding: '6em 0em' }} vertical>
+      <Segment id="projects" style={{ padding: '6em 0em' }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>
@@ -393,7 +430,7 @@ const HomePage = () => {
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: '8em' }} vertical>
+      <Segment id="photos" style={{ padding: '8em' }} vertical>
         <Grid stackable>
           <Grid.Row textAlign="center">
             <Grid.Column width={1} />
@@ -404,7 +441,7 @@ const HomePage = () => {
           </Grid.Row>
         </Grid>
       </Segment>
-      <Segment inverted vertical style={{ padding: '5em 0em' }}>
+      <Segment id="music" inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
           <Grid divided inverted stackable>
             <Grid.Row>
@@ -425,8 +462,8 @@ const HomePage = () => {
                   </List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={5}>
-                <Header inverted as="h4" content="More" />
+              <Grid.Column width={6}>
+                <Icon name="smiley" />
                 <List link inverted>
                   <List.Item href="https://github.com/carlcorsini" as="a">
                     <Icon name="github" />
@@ -452,7 +489,7 @@ const HomePage = () => {
                   </List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={6}>
+              <Grid.Column width={5}>
                 <Header href="mailto:carl.m.corsini@gmail.com" as="a" inverted>
                   carl.m.corsini@gmail.com
                 </Header>
