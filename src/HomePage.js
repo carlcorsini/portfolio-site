@@ -21,6 +21,7 @@ import {
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+
 const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
@@ -98,9 +99,14 @@ class DesktopContainer extends Component {
                   href="https://linkedin.com/in/carlcorsini">
                   <Icon name="linkedin" />
                 </Menu.Item>
+                <Menu.Item
+                  style={{ textDecoration: 'none' }}
+                  href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
+                  Resume
+                </Menu.Item>
               </Container>
             </Menu>
-            <HomepageHeading />
+            <HomepageHeading className="landing-image" />
           </Segment>
         </Visibility>
 
@@ -139,9 +145,6 @@ class MobileContainer extends Component {
             inverted
             vertical
             visible={sidebarOpened}>
-            <Menu.Item as="a" active>
-              Home
-            </Menu.Item>
             <Menu.Item
               style={{ textDecoration: 'none' }}
               href="https://github.com/carlcorsini/BeerMe-Frontend">
@@ -149,12 +152,14 @@ class MobileContainer extends Component {
             </Menu.Item>
             <Menu.Item
               style={{ textDecoration: 'none' }}
-              href="https://github.com/carlcorsini/BeerMe-Frontend">
-              <Icon name="github" />
+              href="https://linkedin.com/in/carlcorsini">
+              <Icon name="linkedin" />
             </Menu.Item>
-            <Menu.Item as="a">Careers</Menu.Item>
-            <Menu.Item as="a">Log in</Menu.Item>
-            <Menu.Item as="a">Sign Up</Menu.Item>
+            <Menu.Item
+              style={{ textDecoration: 'none' }}
+              href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
+              Resume
+            </Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher
@@ -171,13 +176,20 @@ class MobileContainer extends Component {
                   <Menu.Item onClick={this.handleToggle}>
                     <Icon name="sidebar" />
                   </Menu.Item>
-                  <Menu.Item position="right">
-                    <Button as="a" inverted>
-                      Log in
-                    </Button>
-                    <Button as="a" inverted style={{ marginLeft: '0.5em' }}>
-                      Sign Up
-                    </Button>
+                  <Menu.Item
+                    style={{ textDecoration: 'none' }}
+                    href="https://github.com/carlcorsini/BeerMe-Frontend">
+                    <Icon name="github" />
+                  </Menu.Item>
+                  <Menu.Item
+                    style={{ textDecoration: 'none' }}
+                    href="https://linkedin.com/in/carlcorsini">
+                    <Icon name="linkedin" />
+                  </Menu.Item>
+                  <Menu.Item
+                    style={{ textDecoration: 'none' }}
+                    href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
+                    Resume
                   </Menu.Item>
                 </Menu>
               </Container>
@@ -213,6 +225,74 @@ const HomePage = () => {
   }
   return (
     <ResponsiveContainer>
+      <Segment style={{ padding: '4em 0em' }} vertical>
+        <Container text>
+          <p style={{ textAlign: 'left', fontSize: '1.33em' }}>
+            Carl Corsini is a Full-Stack Software Engineer who eats, sleeps and
+            breathes JavaScript. He is passionate about bringing people
+            enjoyable and life altering experiences through technology.
+            Technically skilled programmer with advanced interpersonal skills
+            from experience in management. Carl also enjoys producing music,
+            photography, and spending time away from his laptop occasionally.
+          </p>
+          <Button
+            primary
+            href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing"
+            as="a"
+            size="large">
+            Resume
+          </Button>
+        </Container>
+      </Segment>
+
+      <Segment style={{ padding: '0em' }} vertical>
+        <Grid divided columns="equal" stackable>
+          <Grid.Row textAlign="center">
+            <Grid.Column
+              style={{
+                fontSize: '1.5em',
+                paddingBottom: '2em',
+                paddingTop: '2em'
+              }}>
+              <List>
+                <List.Item>Javascript | ES6</List.Item>
+                <List.Item>Python</List.Item>
+                <List.Item>Ruby</List.Item>
+                <List.Item>HTML</List.Item>
+                <List.Item>CSS</List.Item>
+              </List>
+            </Grid.Column>
+            <Grid.Column
+              style={{
+                fontSize: '1.5em',
+                paddingBottom: '2em',
+                paddingTop: '2em'
+              }}>
+              <List>
+                <List.Item>Flask | SQLAlchemy</List.Item>
+                <List.Item>PostgreSQL | MongoDB | NoSQL</List.Item>
+                <List.Item>React | Redux | Router</List.Item>
+                <List.Item>Mocha & Chai</List.Item>
+                <List.Item>Node.JS | Express</List.Item>
+              </List>
+            </Grid.Column>
+            <Grid.Column
+              style={{
+                fontSize: '1.5em',
+                paddingBottom: '2em',
+                paddingTop: '2em'
+              }}>
+              <List>
+                <List.Item>Object Oriented Programming (OOP)</List.Item>
+                <List.Item>Agile Methodology</List.Item>
+                <List.Item>Github</List.Item>
+                <List.Item>Test Driven Development</List.Item>
+                <List.Item>REST APIs</List.Item>
+              </List>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Segment>
       <Segment style={{ padding: '8em 0em' }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
@@ -267,93 +347,7 @@ const HomePage = () => {
           </Grid.Row>
         </Grid>
       </Segment>
-      <Segment style={{ padding: '0em' }} vertical>
-        <Grid divided columns="equal" stackable>
-          <Grid.Row textAlign="center">
-            <Grid.Column
-              style={{
-                fontSize: '1.5em',
-                paddingBottom: '2em',
-                paddingTop: '2em'
-              }}>
-              <List>
-                <List.Item>Javascript | ES6</List.Item>
-                <List.Item>Python</List.Item>
-                <List.Item>Ruby</List.Item>
-                <List.Item>HTML</List.Item>
-                <List.Item>CSS</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column
-              style={{
-                fontSize: '1.5em',
-                paddingBottom: '2em',
-                paddingTop: '2em'
-              }}>
-              <List>
-                <List.Item>Flask | SQLAlchemy</List.Item>
-                <List.Item>PostgreSQL | MongoDB | NoSQL</List.Item>
-                <List.Item>React | Redux | Router</List.Item>
-                <List.Item>Mocha & Chai</List.Item>
-                <List.Item>Node.JS | Express</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column
-              style={{
-                fontSize: '1.5em',
-                paddingBottom: '2em',
-                paddingTop: '2em'
-              }}>
-              <List>
-                <List.Item>Object Oriented Programming (OOP)</List.Item>
-                <List.Item>Agile Methodology</List.Item>
-                <List.Item>Github</List.Item>
-                <List.Item>Test Driven Development</List.Item>
-                <List.Item>REST APIs</List.Item>
-              </List>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Segment>
 
-      <Segment style={{ padding: '8em 0em' }} vertical>
-        <Container text>
-          <Header as="h3" style={{ fontSize: '2em' }}>
-            While You're Here, Grab a Resume!
-          </Header>
-          <p style={{ textAlign: 'left', fontSize: '1.33em' }}>
-            Carl Corsini is a Full-Stack Software Engineer who eats, sleeps and
-            breathes JavaScript. He is passionate about bringing people
-            enjoyable and life altering experiences through technology.
-            Technically skilled programmer with advanced interpersonal skills
-            from experience in management. Carl also enjoys producing music,
-            photography, and spending time away from his laptop occasionally.
-          </p>
-          <Button primary download href="/Resume.pdf" as="a" size="large">
-            Click To Download
-          </Button>
-
-          {/* <Divider
-            as="h4"
-            className="header"
-            horizontal
-            style={{ margin: '3em 0em', textTransform: 'uppercase' }}>
-            <a href="#">Case Studies</a> */}
-          {/* </Divider>
-          <Header as="h3" style={{ fontSize: '2em' }}>
-            Did We Tell You About Our Bananas?
-          </Header>
-          <p style={{ fontSize: '1.33em' }}>
-            Yes I know you probably disregarded the earlier boasts as
-            non-sequitur filler content, but it's really true. It took years of
-            gene splicing and combinatory DNA research, but our bananas can
-            really dance.
-          </p>
-          <Button as="a" size="large">
-            I'm Still Quite Interested
-          </Button> */}
-        </Container>
-      </Segment>
       {/* <Segment style={{ padding: '0em' }} vertical>
         <Grid celled="internally" columns="equal" stackable>
           <Grid.Row textAlign="center">
