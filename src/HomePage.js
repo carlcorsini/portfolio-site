@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import React, { Component } from 'react'
+import PhotoCards from './PhotoCards'
 import {
+  Card,
   Button,
   Container,
   Divider,
@@ -21,6 +23,30 @@ import {
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+
+const notifyButtonClick = event => {
+  event.persist()
+  event.target.innerHTML = 'There it is :)'
+  setTimeout(() => {
+    event.target.innerHTML = 'hate to see you go'
+  }, 2000)
+  setTimeout(() => {
+    event.target.innerHTML = 'check out BeerMe'
+  }, 4000)
+  setTimeout(() => {
+    event.target.innerHTML = "it's pretty neat"
+  }, 6000)
+  setTimeout(() => {
+    event.target.innerHTML = 'Have a great day!'
+  }, 8000)
+  setTimeout(() => {
+    event.target.innerHTML = 'Bye bye now'
+  }, 10000)
+
+  setTimeout(() => {
+    event.target.innerHTML = 'Copy Email to Clipboard'
+  }, 12000)
+}
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
@@ -91,7 +117,7 @@ class DesktopContainer extends Component {
               <Container>
                 <Menu.Item
                   style={{ textDecoration: 'none' }}
-                  href="https://github.com/carlcorsini/BeerMe-Frontend">
+                  href="https://github.com/carlcorsini">
                   <Icon name="github" />
                 </Menu.Item>
                 <Menu.Item
@@ -103,6 +129,11 @@ class DesktopContainer extends Component {
                   style={{ textDecoration: 'none' }}
                   href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
                   Resume
+                </Menu.Item>
+                <Menu.Item
+                  style={{ textDecoration: 'none' }}
+                  href="mailto:carl.m.corsini@gmail.com">
+                  carl.m.corsini@gmail.com
                 </Menu.Item>
               </Container>
             </Menu>
@@ -147,7 +178,7 @@ class MobileContainer extends Component {
             visible={sidebarOpened}>
             <Menu.Item
               style={{ textDecoration: 'none' }}
-              href="https://github.com/carlcorsini/BeerMe-Frontend">
+              href="https://github.com/carlcorsini">
               <Icon name="github" /> Github
             </Menu.Item>
             <Menu.Item
@@ -167,6 +198,11 @@ class MobileContainer extends Component {
             </Menu.Item>
             <Menu.Item href="https://soundcloud.com/carl-corsini" as="a">
               <Icon name="soundcloud" /> Soundcloud
+            </Menu.Item>
+            <Menu.Item
+              href="https://github.com/carlcorsini/portfolio-site"
+              as="a">
+              <Icon name="code" /> Source Code
             </Menu.Item>
           </Sidebar>
 
@@ -235,21 +271,14 @@ const HomePage = () => {
     <ResponsiveContainer>
       <Segment style={{ padding: '4em 0em' }} vertical>
         <Container text>
-          <p style={{ textAlign: 'left', fontSize: '1.33em' }}>
-            Carl Corsini is a Full-Stack Software Engineer who eats, sleeps and
-            breathes JavaScript. He is passionate about bringing people
-            enjoyable and life altering experiences through technology.
-            Technically skilled programmer with advanced interpersonal skills
-            from experience in management. Carl also enjoys producing music,
-            photography, and spending time away from his laptop occasionally.
+          <p style={{ fontSize: '1.25em' }}>
+            Things work out best for those who make the best of the way things
+            work out.
           </p>
-          <Button
-            primary
-            href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing"
-            as="a"
-            size="large">
-            Resume
-          </Button>
+          <p style={{ textAlign: 'right', paddingRight: '10em' }}>
+            {' '}
+            -John Wooden
+          </p>
         </Container>
       </Segment>
 
@@ -301,7 +330,7 @@ const HomePage = () => {
           </Grid.Row>
         </Grid>
       </Segment>
-      <Segment style={{ padding: '8em 0em' }} vertical>
+      <Segment style={{ padding: '6em 0em' }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>
@@ -321,6 +350,7 @@ const HomePage = () => {
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
               <Image
+                href="https://beer-me-react.herokuapp.com"
                 bordered
                 rounded
                 size="large"
@@ -329,58 +359,73 @@ const HomePage = () => {
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Column textAlign="center">
-              <Button
-                secondary
-                href="https://beer-me-react.herokuapp.com"
-                size="huge">
-                Check It Out
-              </Button>
-              <Button
-                href="https://github.com/carlcorsini/BeerMe-Frontend"
-                size="huge">
-                Front-End Github
-              </Button>
-              <Button
-                href="https://github.com/carlcorsini/BeerMe-Backend"
-                size="huge">
-                Back-End Github
-              </Button>
-              <Button
-                href="https://github.com/carlcorsini/BeerMe-Python-Backend"
-                size="huge">
-                Python Back-End Github
-              </Button>
+            <Grid.Column style={{ paddingTop: '2em' }} textAlign="center">
+              <Button.Group basic vertical>
+                <Button
+                  basic
+                  href="https://beer-me-react.herokuapp.com"
+                  size="huge">
+                  Check It Out
+                </Button>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/BeerMe-Frontend"
+                  size="huge">
+                  Front-End Github
+                </Button>
+              </Button.Group>
+              <Button.Group basic vertical>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/BeerMe-Backend"
+                  size="huge">
+                  Back-End Github
+                </Button>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/BeerMe-Python-Backend"
+                  size="huge">
+                  Python Back-End Github
+                </Button>
+              </Button.Group>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Segment>
 
-      {/* <Segment style={{ padding: '0em' }} vertical>
-        <Grid celled="internally" columns="equal" stackable>
+      <Segment style={{ padding: '8em' }} vertical>
+        <Grid stackable>
           <Grid.Row textAlign="center">
-            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-              <Header as="h3" style={{ fontSize: '2em' }}>
-                "What a guy!"
-              </Header>
-              <p style={{ fontSize: '1.33em' }}>-Steve Jobs</p>
+            <Grid.Column width={1} />
+            <Grid.Column width={14}>
+              <PhotoCards />
             </Grid.Column>
-            <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-              <Header as="h3" style={{ fontSize: '2em' }}>
-                "Absolute Genius"
-              </Header>
-              <p style={{ fontSize: '1.33em' }}>
-                <b /> -Bill Gates
-              </p>
-            </Grid.Column>
+            <Grid.Column width={1} />
           </Grid.Row>
         </Grid>
-      </Segment> */}
+      </Segment>
       <Segment inverted vertical style={{ padding: '5em 0em' }}>
         <Container>
           <Grid divided inverted stackable>
             <Grid.Row>
-              <Grid.Column width={8}>
+              <Grid.Column width={5} style={{}}>
+                <List>
+                  <List.Item>
+                    <iframe
+                      width="100%"
+                      height="50%"
+                      scrolling="yes"
+                      frameBorder="no"
+                      allow="autoplay"
+                      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/310646666&color=%2300d3ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                    />
+                  </List.Item>
+                  <List.Item style={{ paddingTop: '1em' }}>
+                    This site was built with React & Semantic-UI
+                  </List.Item>
+                </List>
+              </Grid.Column>
+              <Grid.Column width={5}>
                 <Header inverted as="h4" content="More" />
                 <List link inverted>
                   <List.Item href="https://github.com/carlcorsini" as="a">
@@ -400,21 +445,34 @@ const HomePage = () => {
                   <List.Item href="https://soundcloud.com/carl-corsini" as="a">
                     <Icon name="soundcloud" /> Soundcloud
                   </List.Item>
+                  <List.Item
+                    href="https://github.com/carlcorsini/portfolio-site"
+                    as="a">
+                    <Icon name="code" /> Source Code
+                  </List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={8}>
-                <Header as="h4" inverted>
-                  Email
+              <Grid.Column width={6}>
+                <Header href="mailto:carl.m.corsini@gmail.com" as="a" inverted>
+                  carl.m.corsini@gmail.com
                 </Header>
-                <CopyToClipboard text={'carl.m.corsin@gmail.com'}>
+                <br />
+                <br />
+                <Button.Group vertical>
+                  <CopyToClipboard text={'carl.m.corsin@gmail.com'}>
+                    <Button onClick={notifyButtonClick} inverted primary>
+                      Copy Email to Clipboard
+                    </Button>
+                  </CopyToClipboard>
                   <Button
                     primary
-                    onClick={e => {
-                      e.target.innerHTML = 'Copied!'
-                    }}>
-                    Copy to Clipboard
+                    inverted
+                    href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing"
+                    as="a"
+                    size="large">
+                    Resume
                   </Button>
-                </CopyToClipboard>
+                </Button.Group>
               </Grid.Column>
             </Grid.Row>
           </Grid>
