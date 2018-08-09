@@ -148,6 +148,9 @@ class DesktopContainer extends Component {
                 <Menu.Item href="https://www.instagram.com/carlmemaybee" as="a">
                   <Icon name="instagram" />
                 </Menu.Item>
+                <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
+                  <Icon name="beer" />
+                </Menu.Item>
                 <Menu.Item
                   style={{ textDecoration: 'none' }}
                   href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
@@ -223,6 +226,9 @@ class MobileContainer extends Component {
             </Menu.Item>
             <Menu.Item href="https://soundcloud.com/carl-corsini" as="a">
               <Icon name="soundcloud" /> Soundcloud
+            </Menu.Item>
+            <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
+              <Icon name="beer" /> BeerMe
             </Menu.Item>
             <Menu.Item
               href="https://github.com/carlcorsini/portfolio-site"
@@ -479,6 +485,9 @@ const HomePage = () => {
                     href="https://github.com/carlcorsini/portfolio-site"
                     as="a">
                     <Icon name="code" /> Source Code
+                  </List.Item>
+                  <List.Item href="https://beer-me-react.herokuapp.com" as="a">
+                    <Icon name="beer" /> BeerMe
                   </List.Item>
                 </List>
               </Grid.Column>
