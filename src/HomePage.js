@@ -259,7 +259,7 @@ class MobileContainer extends Component {
                   </Menu.Item>
                   <Menu.Item
                     style={{ textDecoration: 'none' }}
-                    href="https://github.com/carlcorsini/BeerMe-Frontend">
+                    href="https://github.com/carlcorsini">
                     <Icon name="github" />
                   </Menu.Item>
                   <Menu.Item
