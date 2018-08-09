@@ -3,10 +3,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import React, { Component } from 'react'
 import PhotoCards from './PhotoCards'
 import {
-  Card,
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
@@ -94,10 +92,6 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em'
       }}
     />
-    {/* <Button primary size="huge">
-      Resume
-      <Icon name="right arrow" />
-    </Button> */}
   </Container>
 )
 
@@ -271,11 +265,6 @@ class MobileContainer extends Component {
                     <Icon name="soundcloud" />
                   </Menu.Item>
                   <Menu.Item
-                    href="https://www.instagram.com/carlmemaybee"
-                    as="a">
-                    <Icon name="instagram" />
-                  </Menu.Item>
-                  <Menu.Item
                     position="right"
                     style={{ textDecoration: 'none' }}
                     href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
@@ -310,9 +299,6 @@ ResponsiveContainer.propTypes = {
 }
 
 const HomePage = () => {
-  let state = {
-    copied: false
-  }
   return (
     <ResponsiveContainer>
       <Segment style={{ padding: '4em 0em' }} vertical>
@@ -321,7 +307,7 @@ const HomePage = () => {
             Things work out best for those who make the best of the way things
             work out.
           </p>
-          <p style={{}}> -John Wooden</p>
+          <p> -John Wooden</p>
         </Container>
       </Segment>
 
@@ -455,6 +441,7 @@ const HomePage = () => {
                 <List>
                   <List.Item>
                     <iframe
+                      title="soundcloud"
                       width="100%"
                       height="50%"
                       scrolling="yes"
