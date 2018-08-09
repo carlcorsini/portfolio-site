@@ -227,13 +227,13 @@ class MobileContainer extends Component {
             <Menu.Item href="https://soundcloud.com/carl-corsini" as="a">
               <Icon name="soundcloud" /> Soundcloud
             </Menu.Item>
-            <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
-              <Icon name="beer" /> BeerMe
-            </Menu.Item>
             <Menu.Item
               href="https://github.com/carlcorsini/portfolio-site"
               as="a">
               <Icon name="code" /> Source Code
+            </Menu.Item>
+            <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
+              <Icon name="beer" /> BeerMe
             </Menu.Item>
             <Menu.Item
               style={{ textDecoration: 'none' }}
