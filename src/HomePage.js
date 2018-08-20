@@ -22,6 +22,33 @@ import {
  * such things.
  */
 
+let quotes = [
+  [
+    'Things work out best for those who make the best of the way things work out.',
+    'John Wooden'
+  ],
+  ['Never mistake activity for achievement.', 'John Wooden'],
+  [
+    'Do not let what you cannot do interfere with what you can do.',
+    'John Wooden'
+  ],
+  [
+    'Success is peace of mind which is a direct result of self-satisfaction in knowing you did your best to become the best you are capable of becoming.',
+    'John Wooden'
+  ],
+  [
+    'Do not take life too seriously. You will never get out of it alive.',
+    'Elbert Hubbard'
+  ]
+]
+
+const randomQuote = (array, max) => {
+  let random = Math.floor(Math.random() * Math.floor(max))
+  return array[random]
+}
+
+let quote = randomQuote(quotes, 5)
+
 const notifyButtonClick = event => {
   event.persist()
   event.target.innerHTML = 'There it is :)'
@@ -309,11 +336,8 @@ const HomePage = () => {
     <ResponsiveContainer>
       <Segment style={{ padding: '4em 0em' }} vertical>
         <Container text>
-          <p style={{ fontSize: '1.25em' }}>
-            Things work out best for those who make the best of the way things
-            work out.
-          </p>
-          <p> -John Wooden</p>
+          <p style={{ fontSize: '1.25em' }}>{quote[0]}</p>
+          <p> -{quote[1]}</p>
         </Container>
       </Segment>
 
