@@ -39,6 +39,21 @@ let quotes = [
   [
     'Do not take life too seriously. You will never get out of it alive.',
     'Elbert Hubbard'
+  ],
+  [
+    'I have not failed. I’ve just found 10,000 ways that won’t work.',
+    'Thomas Edison'
+  ],
+  ['Change is the only constant in life.', 'Heraclitus'],
+  [
+    'Work like you don’t need the money. Love like you’ve never been hurt. Dance like nobody’s watching.',
+    'Satchel Paige'
+  ],
+  ['Not all those who wander are lost.', 'J.R.R. Tolkien'],
+  ['The secret of getting ahead is getting started.', 'Mark Twain'],
+  [
+    'The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.',
+    'William Arthur Ward'
   ]
 ]
 
@@ -47,7 +62,7 @@ const randomQuote = (array, max) => {
   return array[random]
 }
 
-let quote = randomQuote(quotes, 5)
+let quote = randomQuote(quotes, 11)
 
 const notifyButtonClick = event => {
   event.persist()
