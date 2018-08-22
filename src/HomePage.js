@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import React, { Component } from 'react'
 import PhotoCards from './PhotoCards'
+import FadeIn from 'react-fade-in'
 import {
   Button,
   Container,
@@ -351,8 +352,10 @@ const HomePage = () => {
     <ResponsiveContainer>
       <Segment style={{ padding: '4em 0em' }} vertical>
         <Container text>
-          <p style={{ fontSize: '1.25em' }}>{quote[0]}</p>
-          <p> -{quote[1]}</p>
+          <FadeIn>
+            <p style={{ fontSize: '1.25em' }}>{quote[0]}</p>
+            <p> -{quote[1]}</p>
+          </FadeIn>
         </Container>
       </Segment>
 
