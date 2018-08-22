@@ -196,7 +196,7 @@ class DesktopContainer extends Component {
                 </Menu.Item>
                 <Menu.Item
                   style={{ textDecoration: 'none' }}
-                  href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
+                  href="https://drive.google.com/file/d/1wdyDlrulX8t5qQSOBuDeHsh4k3Sb2H4u/view?usp=sharing">
                   Resume
                 </Menu.Item>
                 <Menu.Item
@@ -259,7 +259,7 @@ class MobileContainer extends Component {
             </Menu.Item>
             <Menu.Item
               style={{ textDecoration: 'none' }}
-              href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
+              href="https://drive.google.com/file/d/1wdyDlrulX8t5qQSOBuDeHsh4k3Sb2H4u/view?usp=sharing">
               <Icon name="file alternate" />
               Resume
             </Menu.Item>
@@ -316,7 +316,7 @@ class MobileContainer extends Component {
                   <Menu.Item
                     position="right"
                     style={{ textDecoration: 'none' }}
-                    href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing">
+                    href="https://drive.google.com/file/d/1wdyDlrulX8t5qQSOBuDeHsh4k3Sb2H4u/view?usp=sharing">
                     Resume
                   </Menu.Item>
                 </Menu>
@@ -548,7 +548,7 @@ const HomePage = () => {
                   <Button
                     primary
                     inverted
-                    href="https://drive.google.com/file/d/1dm2TkDiVp3MFWCANie3iktq9KWtN1ETv/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1wdyDlrulX8t5qQSOBuDeHsh4k3Sb2H4u/view?usp=sharing"
                     as="a"
                     size="large">
                     Resume
