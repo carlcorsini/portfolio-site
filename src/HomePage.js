@@ -540,7 +540,7 @@ const HomePage = () => {
                 <br />
                 <br />
                 <Button.Group vertical>
-                  <CopyToClipboard text={'carl.m.corsin@gmail.com'}>
+                  <CopyToClipboard text={'carl.m.corsini@gmail.com'}>
                     <Button onClick={notifyButtonClick} inverted primary>
                       Copy Email to Clipboard
                     </Button>
