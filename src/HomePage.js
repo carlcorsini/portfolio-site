@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PhotoCards from './PhotoCards'
 import FadeIn from 'react-fade-in'
 import {
+  Tab,
   Button,
   Container,
   Grid,
@@ -15,13 +16,211 @@ import {
   Responsive,
   Segment,
   Sidebar,
-  Visibility
+  Visibility,
+  Divider
 } from 'semantic-ui-react'
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  */
+
+const panes = [
+  {
+    menuItem: 'BeerMe',
+    render: () => (
+      <Tab.Pane
+        style={{
+          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)'
+        }}
+        attached={false}>
+        <Grid container stackable verticalAlign="middle">
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <Header as="h3" style={{ fontSize: '2em' }}>
+                BeerMe
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>
+                A hub for beer lovers created with React.
+              </p>
+              <Header as="h3" style={{ fontSize: '2em' }}>
+                Find your watering hole.
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>
+                Navigate through our beer database, create your own tasting
+                profile, and share it with the world!
+              </p>
+            </Grid.Column>
+            <Grid.Column floated="right" width={6}>
+              <Image
+                href="https://beer-me-react.herokuapp.com"
+                bordered
+                rounded
+                size="large"
+                src="https://i.imgur.com/AWzT3w5.png"
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column style={{ paddingTop: '2em' }} textAlign="center">
+              <Button.Group basic vertical>
+                <Button
+                  basic
+                  href="https://beer-me-react.herokuapp.com"
+                  size="huge">
+                  Check It Out
+                </Button>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/BeerMe-Frontend"
+                  size="huge">
+                  Front-End Github
+                </Button>
+              </Button.Group>
+              <Button.Group basic vertical>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/BeerMe-Backend"
+                  size="huge">
+                  Back-End Github
+                </Button>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/BeerMe-Python-Backend"
+                  size="huge">
+                  Python Back-End Github
+                </Button>
+              </Button.Group>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Tab.Pane>
+    )
+  },
+  {
+    menuItem: 'ThatSong',
+    render: () => (
+      <Tab.Pane
+        style={{
+          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)'
+        }}
+        attached={false}>
+        <Grid container stackable verticalAlign="middle">
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <Header as="h3" style={{ fontSize: '2em' }}>
+                ThatSong
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>Dj's best friend</p>
+              <Header as="h3" style={{ fontSize: '2em' }}>
+                Never lose a track!
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>
+                Utilize a chrome extension and React-App to save, organize and
+                browse your favorite tracks.
+              </p>
+            </Grid.Column>
+            <Grid.Column floated="right" width={6}>
+              <iframe
+                title="thatSong-walkthrough"
+                width="350"
+                height="200"
+                src="https://www.youtube.com/embed/zWdKutLttWI"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen="yes"
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column style={{ paddingTop: '2em' }} textAlign="center">
+              <Button.Group basic vertical>
+                <Button basic href="https://that-song.com/about" size="huge">
+                  Check It Out
+                </Button>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/ThatSong_React"
+                  size="huge">
+                  Front-End Github
+                </Button>
+              </Button.Group>
+              <Button.Group basic vertical>
+                <Button
+                  basic
+                  href="https://chrome.google.com/webstore/detail/thatsong/anbbnfbonmbbfboffbagbcaoehhgkjmn"
+                  size="huge">
+                  Chrome Extension
+                </Button>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/ThatSong_Backend"
+                  size="huge">
+                  Back-End Github
+                </Button>
+              </Button.Group>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Tab.Pane>
+    )
+  },
+  {
+    menuItem: 'Bay Area Writing Coach',
+    render: () => (
+      <Tab.Pane
+        style={{
+          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)'
+        }}
+        attached={false}>
+        <Grid container stackable verticalAlign="middle">
+          <Grid.Row>
+            <Grid.Column width={8}>
+              <Header as="h3" style={{ fontSize: '2em' }}>
+                Bay Area Writing Coach
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>Small business site example</p>
+              <Header as="h3" style={{ fontSize: '2em' }}>
+                Become the best writer you can be!
+              </Header>
+              <p style={{ fontSize: '1.33em' }}>
+                Showcasing design abilities and customization options for front
+                end design. Created with React.
+              </p>
+            </Grid.Column>
+            <Grid.Column floated="right" width={6}>
+              <Image
+                href="https://bayareawritingcoach.com"
+                bordered
+                rounded
+                size="large"
+                src="https://i.imgur.com/x8x15N3.png"
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column style={{ paddingTop: '2em' }} textAlign="center">
+              <Button.Group basic vertical>
+                <Button
+                  basic
+                  href="https://bayareawritingcoach.com"
+                  size="huge">
+                  Check It Out
+                </Button>
+                <Button
+                  basic
+                  href="https://github.com/carlcorsini/bay-area-writing-coach"
+                  size="huge">
+                  Front-End Github
+                </Button>
+              </Button.Group>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Tab.Pane>
+    )
+  }
+]
 
 let quotes = [
   [
@@ -408,70 +607,36 @@ const HomePage = () => {
         </Grid>
       </Segment>
       <Segment id="projects" style={{ padding: '6em 0em' }} vertical>
-        <Grid container stackable verticalAlign="middle">
-          <Grid.Row>
-            <Grid.Column width={8}>
-              <Header as="h3" style={{ fontSize: '2em' }}>
-                BeerMe
-              </Header>
-              <p style={{ fontSize: '1.33em' }}>
-                A hub for beer lovers created with React.
-              </p>
-              <Header as="h3" style={{ fontSize: '2em' }}>
-                Find your watering hole.
-              </Header>
-              <p style={{ fontSize: '1.33em' }}>
-                Navigate through our beer database, create your own tasting
-                profile, and share it with the world!
-              </p>
-            </Grid.Column>
-            <Grid.Column floated="right" width={6}>
-              <Image
-                href="https://beer-me-react.herokuapp.com"
-                bordered
-                rounded
-                size="large"
-                src="https://i.imgur.com/AWzT3w5.png"
-              />
+        <Container>
+          <Grid.Row textAlign="center">
+            <Grid.Column width={16}>
+              <Header style={{ fontSize: '3em' }}>Projects</Header>
+              <Icon size="huge" name="code" />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row>
-            <Grid.Column style={{ paddingTop: '2em' }} textAlign="center">
-              <Button.Group basic vertical>
-                <Button
-                  basic
-                  href="https://beer-me-react.herokuapp.com"
-                  size="huge">
-                  Check It Out
-                </Button>
-                <Button
-                  basic
-                  href="https://github.com/carlcorsini/BeerMe-Frontend"
-                  size="huge">
-                  Front-End Github
-                </Button>
-              </Button.Group>
-              <Button.Group basic vertical>
-                <Button
-                  basic
-                  href="https://github.com/carlcorsini/BeerMe-Backend"
-                  size="huge">
-                  Back-End Github
-                </Button>
-                <Button
-                  basic
-                  href="https://github.com/carlcorsini/BeerMe-Python-Backend"
-                  size="huge">
-                  Python Back-End Github
-                </Button>
-              </Button.Group>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+          <FadeIn>
+            <Tab
+              style={{
+                marginTop: '3em',
+                marginBottom: '5em'
+              }}
+              menu={{
+                compact: true,
+                pointing: true
+              }}
+              panes={panes}
+            />
+          </FadeIn>
+        </Container>
       </Segment>
-
-      <Segment id="photos" style={{ padding: '8em' }} vertical>
+      <Segment id="photos" style={{ padding: '5em' }} vertical>
         <Grid stackable>
+          <Grid.Row textAlign="center">
+            <Grid.Column width={16}>
+              <Header style={{ fontSize: '3em' }}>Photography</Header>
+              <Icon style={{ marginBottom: '1em' }} size="huge" name="camera" />
+            </Grid.Column>
+          </Grid.Row>
           <Grid.Row textAlign="center">
             <Grid.Column width={1} />
             <Grid.Column width={14}>
@@ -504,32 +669,28 @@ const HomePage = () => {
                 </List>
               </Grid.Column>
               <Grid.Column width={6}>
-                <Icon name="linkify" />
-                <List link inverted>
+                <List style={{ marginTop: '1em' }} link inverted>
                   <List.Item href="https://github.com/carlcorsini" as="a">
                     <Icon name="github" />
-                    Github
                   </List.Item>
                   <List.Item href="https://linkedin.com/in/carlcorsini" as="a">
                     <Icon name="linkedin" />
-                    LinkedIn
                   </List.Item>
                   <List.Item
                     href="https://www.instagram.com/carlmemaybee"
                     as="a">
                     <Icon name="instagram" />
-                    Instagram
                   </List.Item>
                   <List.Item href="https://soundcloud.com/carl-corsini" as="a">
-                    <Icon name="soundcloud" /> Soundcloud
+                    <Icon name="soundcloud" />
                   </List.Item>
                   <List.Item
                     href="https://github.com/carlcorsini/portfolio-site"
                     as="a">
-                    <Icon name="code" /> Source Code
+                    <Icon name="code" />
                   </List.Item>
                   <List.Item href="https://beer-me-react.herokuapp.com" as="a">
-                    <Icon name="beer" /> BeerMe
+                    <Icon name="beer" />
                   </List.Item>
                 </List>
               </Grid.Column>
