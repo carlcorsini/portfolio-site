@@ -669,7 +669,12 @@ const HomePage = () => {
                 </List>
               </Grid.Column>
               <Grid.Column width={6}>
-                <List style={{ marginTop: '1em' }} link inverted>
+                <List
+                  verticalAlign="middle"
+                  relaxed
+                  style={{ marginTop: '1em' }}
+                  link
+                  inverted>
                   <List.Item href="https://github.com/carlcorsini" as="a">
                     <Icon name="github" />
                   </List.Item>
