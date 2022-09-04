@@ -17,7 +17,6 @@ import {
   Segment,
   Sidebar,
   Visibility,
-  Divider,
 } from 'semantic-ui-react';
 
 /* eslint-disable react/no-multi-comp */
