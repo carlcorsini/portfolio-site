@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
-import React, { Component } from 'react'
-import PhotoCards from './PhotoCards'
-import FadeIn from 'react-fade-in'
+import PropTypes from 'prop-types';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import React, { Component } from 'react';
+import PhotoCards from './PhotoCards';
+import FadeIn from 'react-fade-in';
 import {
   Tab,
   Button,
@@ -17,8 +17,8 @@ import {
   Segment,
   Sidebar,
   Visibility,
-  Divider
-} from 'semantic-ui-react'
+  Divider,
+} from 'semantic-ui-react';
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -27,37 +27,41 @@ import {
 
 const panes = [
   {
-    menuItem: 'BeerMe',
+    menuItem: 'MRN Tracking App',
     render: () => (
       <Tab.Pane
         style={{
-          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)'
+          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)',
         }}
         attached={false}>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>
               <Header as="h3" style={{ fontSize: '2em' }}>
-                BeerMe
+                MRN Tracking App
               </Header>
               <p style={{ fontSize: '1.33em' }}>
-                A hub for beer lovers created with React.
+                Referral tracking application used to track, search, sort, and
+                gain insights on referral activity for a Marin County community
+                group.
               </p>
               <Header as="h3" style={{ fontSize: '2em' }}>
-                Find your watering hole.
+                Enables leadership to easily monitor activity within group, a
+                task that was once tedious is now instant.
               </Header>
               <p style={{ fontSize: '1.33em' }}>
-                Navigate through our beer database, create your own tasting
-                profile, and share it with the world!
+                Users can select other users for associated activities, report
+                view shows visualizations and total stats for selected time
+                periods.
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
               <Image
-                href="https://beer-me-react.herokuapp.com"
+                href="https://mrn-tracking.netlify.app/"
                 bordered
                 rounded
                 size="large"
-                src="https://i.imgur.com/AWzT3w5.png"
+                src="https://marinreferral.net/wp-content/uploads/2015/06/mrn.logo_.lrg_1.png"
               />
             </Grid.Column>
           </Grid.Row>
@@ -66,43 +70,29 @@ const panes = [
               <Button.Group basic vertical>
                 <Button
                   basic
-                  href="https://beer-me-react.herokuapp.com"
+                  href="https://mrn-tracking.netlify.app/"
                   size="huge">
                   Check It Out
                 </Button>
                 <Button
                   basic
-                  href="https://github.com/carlcorsini/BeerMe-Frontend"
+                  href="https://github.com/carlcorsini/mrn-tracking"
                   size="huge">
                   Front-End Github
-                </Button>
-              </Button.Group>
-              <Button.Group basic vertical>
-                <Button
-                  basic
-                  href="https://github.com/carlcorsini/BeerMe-Backend"
-                  size="huge">
-                  Back-End Github
-                </Button>
-                <Button
-                  basic
-                  href="https://github.com/carlcorsini/BeerMe-Python-Backend"
-                  size="huge">
-                  Python Back-End Github
                 </Button>
               </Button.Group>
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Tab.Pane>
-    )
+    ),
   },
   {
     menuItem: 'ThatSong',
     render: () => (
       <Tab.Pane
         style={{
-          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)'
+          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)',
         }}
         attached={false}>
         <Grid container stackable verticalAlign="middle">
@@ -163,23 +153,25 @@ const panes = [
           </Grid.Row>
         </Grid>
       </Tab.Pane>
-    )
+    ),
   },
   {
-    menuItem: 'Bay Area Writing Coach',
+    menuItem: 'Laura Larkin Interiors',
     render: () => (
       <Tab.Pane
         style={{
-          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)'
+          boxShadow: '1px 1px 10px 1px rgba(30, 31, 38, 0.58)',
         }}
         attached={false}>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>
               <Header as="h3" style={{ fontSize: '2em' }}>
-                Bay Area Writing Coach
+                Laura Larkin Interiors
               </Header>
-              <p style={{ fontSize: '1.33em' }}>Small business site example</p>
+              <p style={{ fontSize: '1.33em' }}>
+                Static Site For Interior Design Business
+              </p>
               <Header as="h3" style={{ fontSize: '2em' }}>
                 Become the best writer you can be!
               </Header>
@@ -218,75 +210,75 @@ const panes = [
           </Grid.Row>
         </Grid>
       </Tab.Pane>
-    )
-  }
-]
+    ),
+  },
+];
 
 let quotes = [
   [
     'Things work out best for those who make the best of the way things work out.',
-    'John Wooden'
+    'John Wooden',
   ],
   ['Never mistake activity for achievement.', 'John Wooden'],
   [
     'Do not let what you cannot do interfere with what you can do.',
-    'John Wooden'
+    'John Wooden',
   ],
   [
     'Success is peace of mind which is a direct result of self-satisfaction in knowing you did your best to become the best you are capable of becoming.',
-    'John Wooden'
+    'John Wooden',
   ],
   [
     'Do not take life too seriously. You will never get out of it alive.',
-    'Elbert Hubbard'
+    'Elbert Hubbard',
   ],
   [
     'I have not failed. I’ve just found 10,000 ways that won’t work.',
-    'Thomas Edison'
+    'Thomas Edison',
   ],
   ['Change is the only constant in life.', 'Heraclitus'],
   [
     'Work like you don’t need the money. Love like you’ve never been hurt. Dance like nobody’s watching.',
-    'Satchel Paige'
+    'Satchel Paige',
   ],
   ['Not all those who wander are lost.', 'J.R.R. Tolkien'],
   ['The secret of getting ahead is getting started.', 'Mark Twain'],
   [
     'The pessimist complains about the wind; the optimist expects it to change; the realist adjusts the sails.',
-    'William Arthur Ward'
-  ]
-]
+    'William Arthur Ward',
+  ],
+];
 
 const randomQuote = (array, max) => {
-  let random = Math.floor(Math.random() * Math.floor(max))
-  return array[random]
-}
+  let random = Math.floor(Math.random() * Math.floor(max));
+  return array[random];
+};
 
-let quote = randomQuote(quotes, 11)
+let quote = randomQuote(quotes, 11);
 
-const notifyButtonClick = event => {
-  event.persist()
-  event.target.innerHTML = 'There it is :)'
+const notifyButtonClick = (event) => {
+  event.persist();
+  event.target.innerHTML = 'There it is :)';
   setTimeout(() => {
-    event.target.innerHTML = 'hate to see you go'
-  }, 2000)
+    event.target.innerHTML = 'hate to see you go';
+  }, 2000);
   setTimeout(() => {
-    event.target.innerHTML = 'check out BeerMe'
-  }, 4000)
+    event.target.innerHTML = 'check out BeerMe';
+  }, 4000);
   setTimeout(() => {
-    event.target.innerHTML = "it's pretty neat"
-  }, 6000)
+    event.target.innerHTML = "it's pretty neat";
+  }, 6000);
   setTimeout(() => {
-    event.target.innerHTML = 'Have a great day!'
-  }, 8000)
+    event.target.innerHTML = 'Have a great day!';
+  }, 8000);
   setTimeout(() => {
-    event.target.innerHTML = 'Bye bye now'
-  }, 10000)
+    event.target.innerHTML = 'Bye bye now';
+  }, 10000);
 
   setTimeout(() => {
-    event.target.innerHTML = 'Copy Email to Clipboard'
-  }, 12000)
-}
+    event.target.innerHTML = 'Copy Email to Clipboard';
+  }, 12000);
+};
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
@@ -298,7 +290,7 @@ const HomepageHeading = ({ mobile }) => (
         fontSize: mobile ? '2em' : '4em',
         fontWeight: 'normal',
         marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em'
+        marginTop: mobile ? '1.5em' : '3em',
       }}
     />
     <Header
@@ -309,7 +301,7 @@ const HomepageHeading = ({ mobile }) => (
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
         fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em'
+        marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
     <Header
@@ -320,7 +312,7 @@ const HomepageHeading = ({ mobile }) => (
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
         fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em'
+        marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
     <Header
@@ -331,29 +323,29 @@ const HomepageHeading = ({ mobile }) => (
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
         fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em'
+        marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
   </Container>
-)
+);
 
 HomepageHeading.propTypes = {
-  mobile: PropTypes.bool
-}
+  mobile: PropTypes.bool,
+};
 
 /* Heads up!
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-  state = {}
+  state = {};
 
-  hideFixedMenu = () => this.setState({ fixed: false })
-  showFixedMenu = () => this.setState({ fixed: true })
+  hideFixedMenu = () => this.setState({ fixed: false });
+  showFixedMenu = () => this.setState({ fixed: true });
 
   render() {
-    const { children } = this.props
-    const { fixed } = this.state
+    const { children } = this.props;
+    const { fixed } = this.state;
 
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
@@ -390,9 +382,9 @@ class DesktopContainer extends Component {
                 <Menu.Item href="https://www.instagram.com/carlmemaybee" as="a">
                   <Icon name="instagram" />
                 </Menu.Item>
-                <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
+                {/* <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
                   <Icon name="beer" />
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Item
                   style={{ textDecoration: 'none' }}
                   href="https://drive.google.com/file/d/1wdyDlrulX8t5qQSOBuDeHsh4k3Sb2H4u/view?usp=sharing">
@@ -412,29 +404,29 @@ class DesktopContainer extends Component {
 
         {children}
       </Responsive>
-    )
+    );
   }
 }
 
 DesktopContainer.propTypes = {
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+};
 
 class MobileContainer extends Component {
-  state = {}
+  state = {};
 
   handlePusherClick = () => {
-    const { sidebarOpened } = this.state
+    const { sidebarOpened } = this.state;
 
-    if (sidebarOpened) this.setState({ sidebarOpened: false })
-  }
+    if (sidebarOpened) this.setState({ sidebarOpened: false });
+  };
 
   handleToggle = () =>
-    this.setState({ sidebarOpened: !this.state.sidebarOpened })
+    this.setState({ sidebarOpened: !this.state.sidebarOpened });
 
   render() {
-    const { children } = this.props
-    const { sidebarOpened } = this.state
+    const { children } = this.props;
+    const { sidebarOpened } = this.state;
 
     return (
       <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
@@ -474,9 +466,9 @@ class MobileContainer extends Component {
               as="a">
               <Icon name="code" /> Source Code
             </Menu.Item>
-            <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
+            {/* <Menu.Item href="https://beer-me-react.herokuapp.com" as="a">
               <Icon name="beer" /> BeerMe
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item
               style={{ textDecoration: 'none' }}
               href="mailto:carl.m.corsini@gmail.com">
@@ -527,24 +519,24 @@ class MobileContainer extends Component {
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Responsive>
-    )
+    );
   }
 }
 
 MobileContainer.propTypes = {
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+};
 
 const ResponsiveContainer = ({ children }) => (
   <div>
     <DesktopContainer>{children}</DesktopContainer>
     <MobileContainer>{children}</MobileContainer>
   </div>
-)
+);
 
 ResponsiveContainer.propTypes = {
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+};
 
 const HomePage = () => {
   return (
@@ -565,7 +557,7 @@ const HomePage = () => {
               style={{
                 fontSize: '1.5em',
                 paddingBottom: '2em',
-                paddingTop: '2em'
+                paddingTop: '2em',
               }}>
               <List>
                 <List.Item>Javascript | ES6</List.Item>
@@ -579,7 +571,7 @@ const HomePage = () => {
               style={{
                 fontSize: '1.5em',
                 paddingBottom: '2em',
-                paddingTop: '2em'
+                paddingTop: '2em',
               }}>
               <List>
                 <List.Item>Flask | SQLAlchemy</List.Item>
@@ -593,7 +585,7 @@ const HomePage = () => {
               style={{
                 fontSize: '1.5em',
                 paddingBottom: '2em',
-                paddingTop: '2em'
+                paddingTop: '2em',
               }}>
               <List>
                 <List.Item>Object Oriented Programming (OOP)</List.Item>
@@ -618,11 +610,11 @@ const HomePage = () => {
             <Tab
               style={{
                 marginTop: '3em',
-                marginBottom: '5em'
+                marginBottom: '5em',
               }}
               menu={{
                 compact: true,
-                pointing: true
+                pointing: true,
               }}
               panes={panes}
             />
@@ -726,6 +718,6 @@ const HomePage = () => {
         </Container>
       </Segment>
     </ResponsiveContainer>
-  )
-}
-export default HomePage
+  );
+};
+export default HomePage;
